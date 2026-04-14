@@ -1,0 +1,132 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Clock, Plus, Copy, Zap } from "lucide-react";
+
+interface ComponentProps {
+  name?: string;
+  role?: string;
+  email?: string;
+  avatarSrc?: string;
+  statusText?: string;
+  statusColor?: string; 
+  glowText?: string; 
+  className?: string;
+  layoutId?: string;
+}
+
+export default function GlassmorphismProfileCard({
+  name = "Berat Berkay",
+  role = "Developer",
+  email = "beratberkaygokdemir@gmail.com",
+  avatarSrc = "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=200&auto=format&fit=crop",
+  statusText = "Available for work",
+  statusColor = "bg-primary", // Updated to Nexode brand color
+  glowText = "Currently High on Creativity",
+  className,
+  layoutId,
+}: ComponentProps) {
+  const [copied, setCopied] = useState(false);
+
+  // Derive a local clock text once per minute
+  const timeText = useMemo(() => {
+    const now = new Date();
+    const h = now.getHours();
+    const m = now.getMinutes().toString().padStart(2, "0");
+    const hour12 = ((h + 11) % 12) + 1;
+    const ampm = h >= 12 ? "PM" : "AM";
+    return `${hour12}:${m}${ampm}`;
+  }, []);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {}
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 8, scale: 0.95 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className={cn("relative w-full max-w-[400px]", className)}
+      onClick={(e) => e.stopPropagation()} // Prevent modal background clicks from triggering
+      layoutId={layoutId}
+    >
+     
+      {/* Updated the glow underneath to match Nexode's primary blue color #3B82F6 */}
+      <div className="pointer-events-none absolute inset-x-3 -bottom-10 top-[90%] rounded-[28px] bg-primary/70 blur-0 shadow-[0_40px_80px_-16px_rgba(59,130,246,0.8)] z-0 " />
+
+      
+      <div className="absolute inset-x-0 -bottom-10 mx-auto w-full z-10">
+        <div className="flex items-center justify-center gap-2 bg-transparent py-3 text-center text-sm font-medium text-white drop-shadow-md">
+          <Zap className="h-4 w-4 text-primary" /> {glowText}
+        </div>
+      </div>
+
+      <Card className={cn(
+        "relative z-10 mx-auto w-full max-w-3xl overflow-visible rounded-[20px]",
+        "bg-surface/50 backdrop-blur-xl border-white/10",
+        "shadow-2xl shadow-black/50 text-white"
+      )}>
+        <CardContent className="p-6 sm:p-8">
+          <div className="mb-6 flex items-center justify-between text-sm text-gray-400">
+            <div className="flex items-center gap-2">
+              <span className={cn("inline-block h-2.5 w-2.5 rounded-full animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.6)]", statusColor)} />
+              <span className="select-none">{statusText}</span>
+            </div>
+            <div className="flex items-center gap-2 opacity-80">
+              <Clock className="h-4 w-4" />
+              <span className="tabular-nums">{timeText}</span>
+            </div>
+          </div>
+
+        
+          <div className="flex flex-col justify-center items-center gap-5">
+            <div className="relative h-40 w-40 sm:h-52 sm:w-52 shrink-0 overflow-hidden rounded-[20px] ring-2 ring-white/10 shadow-xl">
+              <Image
+                src={avatarSrc}
+                alt={`${name} avatar`}
+                fill
+                sizes="(max-width: 768px) 160px, 208px"
+                className="object-cover"
+              />
+            </div>
+            <div className="min-w-0 text-center">
+              <h3 className="truncate text-xl font-extrabold tracking-tight sm:text-3xl text-white font-headline">
+                {name}
+              </h3>
+              <p className="mt-0.5 text-sm font-medium text-primary uppercase tracking-widest">{role}</p>
+            </div>
+          </div>
+
+       
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <Button
+              variant="outline"
+              className="h-12 justify-start gap-3 rounded-xl bg-white/5 border-white/10 text-white hover:bg-white/10 hover:text-white transition-colors"
+            >
+              <Plus className="h-4 w-4 text-primary" /> Hire Me
+            </Button>
+
+            <Button
+              variant="outline"
+              onClick={handleCopy}
+              className="h-12 justify-start gap-3 rounded-xl bg-white/5 border-white/10 text-white hover:bg-white/10 hover:text-white transition-colors"
+            >
+              <Copy className="h-4 w-4 text-primary" /> {copied ? "Copied" : "Copy Email"}
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
