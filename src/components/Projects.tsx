@@ -86,7 +86,7 @@ export default function Projects() {
                 </div>
                 <motion.div 
                   className="mt-6 opacity-0 h-0 overflow-hidden"
-                  whileHover={{ opacity: 1, h: "auto" }}
+                  whileHover={{ opacity: 1, height: "auto" }}
                 >
                   <button className="text-primary text-sm font-bold flex items-center gap-2">Read more <span className="material-symbols-outlined text-sm">east</span></button>
                 </motion.div>
