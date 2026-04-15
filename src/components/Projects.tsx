@@ -112,6 +112,38 @@ export default function Projects() {
             </GlowCard>
           </motion.div>
 
+          {/* callsflow.io */}
+          <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px]">
+            <GlowCard size="full" className="group rounded-[24px] p-0 border-none flex items-center overflow-hidden w-full h-full relative">
+              <img 
+                alt="callsflow.io" 
+                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                src="/projects/callsflow.png"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+              
+              <div className="p-12 relative z-20 w-full md:w-2/3 pointer-events-none">
+                <div className="flex gap-2 mb-6 pointer-events-auto">
+                  <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">VoIP & AI</span>
+                  <span className="px-3 py-1 rounded bg-white/10 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest">Stripe Integrated</span>
+                </div>
+                <h3 className="text-4xl font-bold text-white mb-4 pointer-events-auto">callsflow.io</h3>
+                <p className="text-xl text-gray-300 leading-relaxed mb-6 pointer-events-auto max-w-xl">
+                  Automated agent-led communication system featuring Twilio SIP trunking and dynamic Stripe-powered credit management.
+                </p>
+                <div className="flex items-center gap-4 text-sm font-bold pointer-events-auto">
+                  <span className="text-primary">Communication SaaS</span>
+                  <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                  <span className="text-gray-500">Active Deployment</span>
+                </div>
+              </div>
+              
+              <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden md:block z-0 pointer-events-none opacity-10 group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-700">
+                <span className="material-symbols-outlined text-[180px]" style={{ fontVariationSettings: "'FILL' 1" }}>settings_phone</span>
+              </div>
+            </GlowCard>
+          </motion.div>
+
           {/* Croptivize */}
           <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px]">
             <GlowCard size="full" className="group rounded-[24px] p-0 border-none flex items-center overflow-hidden w-full h-full relative">
