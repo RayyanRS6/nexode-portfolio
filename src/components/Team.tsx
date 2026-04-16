@@ -35,9 +35,9 @@ const teamMembers = [
   {
     id: "musab",
     name: "Musab Bin Aslam",
-    role: "Quantum Strategist",
+    role: "MERN Stack Developer",
     image: "/team/musab-bin-aslam.png",
-    bio: "Post-Quantum Cryptography Specialist"
+    bio: "High-Performance Web Applications"
   }
 ];
 

@@ -10,10 +10,10 @@ export default function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-6 left-0 right-0 mx-auto w-[95%] max-w-[1200px] z-[100] bg-white/5 backdrop-blur-md backdrop-saturate-150 shadow-[0_15px_35px_rgba(0,0,0,0.4)] rounded-full flex justify-between items-center px-8 py-3"
+      className="fixed top-6 left-0 right-0 mx-auto w-[95%] max-w-[1200px] z-[100] bg-white/5 backdrop-blur-md backdrop-saturate-150 shadow-[0_15px_35px_rgba(0,0,0,0.4)] rounded-full flex justify-between items-center px-4 md:px-8 py-3"
     >
-      <div className="flex items-center gap-2 text-2xl font-extrabold tracking-tighter text-primary font-headline">
-        <Image src="/logo-white.png" alt="Nexode logo" width={30} height={30} className="brightness-0 invert" />
+      <div className="flex items-center gap-1.5 md:gap-2 text-xl md:text-2xl font-extrabold tracking-tighter text-primary font-headline">
+        <Image src="/logo-white.png" alt="Nexode logo" width={24} height={24} className="brightness-0 invert md:w-[30px] md:h-[30px]" />
         Nexode
       </div>
 
@@ -28,7 +28,7 @@ export default function Navigation() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="copper-gradient-bg text-white px-6 py-2 rounded-lg font-bold text-sm copper-glow-border transition-transform"
+        className="copper-gradient-bg text-white px-4 md:px-6 py-2 rounded-lg font-bold text-xs md:text-sm copper-glow-border transition-transform"
       >
         Get Started
       </motion.button>

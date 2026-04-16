@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <header className="relative min-h-screen flex items-center pt-20 overflow-hidden hero-glow">
-      <div className="container mx-auto px-10 relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 relative z-10">
         <motion.div 
           className="max-w-4xl"
           variants={containerVariants}
@@ -35,26 +35,26 @@ export default function Hero() {
             Nexode AI 2.0 is live
           </motion.div>
           
-          <motion.h1 variants={itemVariants} className="text-7xl md:text-8xl font-headline font-extrabold tracking-tight leading-[1.05] text-white mb-8">
+          <motion.h1 variants={itemVariants} className="text-5xl sm:text-7xl md:text-8xl font-headline font-extrabold tracking-tight leading-[1.1] sm:leading-[1.05] text-white mb-8">
             Building Intelligent Systems <span className="text-primary italic">for the Future</span>
           </motion.h1>
           
-          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed max-w-2xl mb-12">
+          <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-400 font-medium leading-relaxed max-w-2xl mb-8 sm:mb-12">
             We engineer scalable machine learning models and AI-driven solutions that automate complexity and unlock unprecedented business value.
           </motion.p>
           
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-6">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="copper-gradient-bg text-white px-10 py-4 rounded-lg font-bold text-lg copper-glow-border transition-all"
+              className="copper-gradient-bg text-white px-10 py-4 rounded-lg font-bold text-lg copper-glow-border transition-all w-full sm:w-auto"
             >
               Explore Our Work
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-white/10 hover:border-primary/50 text-white px-10 py-4 rounded-lg font-bold text-lg bg-white/5 backdrop-blur-sm transition-all"
+              className="border border-white/10 hover:border-primary/50 text-white px-10 py-4 rounded-lg font-bold text-lg bg-white/5 backdrop-blur-sm transition-all w-full sm:w-auto"
             >
               Read the Vision
             </motion.button>
@@ -66,7 +66,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 right-10 flex gap-6 text-[10px] font-mono tracking-[0.2em] text-gray-500 uppercase"
+        className="absolute bottom-10 right-10 hidden md:flex gap-6 text-[10px] font-mono tracking-[0.2em] text-gray-500 uppercase"
       >
         <span>Lat: 37.7749 N</span>
         <span className="text-primary">Lon: 122.4194 W</span>
