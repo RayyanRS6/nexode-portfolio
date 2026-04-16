@@ -2,10 +2,9 @@
 
 import { motion } from "framer-motion";
 
-export default function Footer() {
-  const FooterContent = () => (
-    <div className="flex flex-col md:flex-row justify-between items-end px-10 max-w-[1440px] mx-auto pt-12">
-      <div className="mb-8 md:mb-0">
+const FooterContent = () => (
+    <div className="flex flex-col md:flex-row justify-between items-end px-10 max-w-[1440px] mx-auto pt-12" suppressHydrationWarning>
+      <div className="mb-8 md:mb-0" suppressHydrationWarning>
         <div className="text-2xl font-black text-white font-headline mb-3">Nexode</div>
         <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">© 2026 Nexode AI Labs. All systems functional.</div>
       </div>
@@ -44,20 +43,14 @@ export default function Footer() {
     </div>
   );
 
+export default function Footer() {
   return (
     <>
-      {/* Real Footer: Fixed at the absolute bottom of the screen with a lower z-index */}
-      <footer className="fixed bottom-0 left-0 w-full z-0 footer-flare pt-32 pb-16">
+      <footer className="fixed bottom-0 left-0 w-full z-0 footer-flare pt-32 pb-16" suppressHydrationWarning>
         <FooterContent />
       </footer>
 
-      {/* Ghost Footer: Transparent copy that bounds the scroll depth. 
-          The -mt-[100px] is the magic trick: It forces the ghost footer to be 100px 'shorter' than reality.
-          This prevents the user from scrolling the final 100px of the page, forcing the massive black 
-          upper curtain to permanently drape OVER the top 100px of the fixed orange footer.
-          This preserves the visibility of the rounded-b-[60px] corners since they will sit on blue instead of black body background!
-      */}
-      <footer className="opacity-0 pointer-events-none footer-flare pt-32 pb-16 -mt-[100px]" aria-hidden="true">
+      <footer className="opacity-0 pointer-events-none footer-flare pt-32 pb-16 -mt-[100px]" aria-hidden="true" suppressHydrationWarning>
         <FooterContent />
       </footer>
     </>

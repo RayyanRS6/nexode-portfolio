@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section className="py-32 relative overflow-hidden bg-background" id="contact">
-      <div className="container mx-auto px-10">
+    <section className="py-32 relative overflow-hidden bg-background" id="contact" suppressHydrationWarning>
+      <div className="container mx-auto px-10" suppressHydrationWarning>
         <div className="grid lg:grid-cols-2 gap-20">
           
           <motion.div 

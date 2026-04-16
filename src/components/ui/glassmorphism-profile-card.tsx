@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,17 +31,22 @@ export default function GlassmorphismProfileCard({
   className,
   layoutId,
 }: ComponentProps) {
-  const [copied, setCopied] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Derive a local clock text once per minute
   const timeText = useMemo(() => {
+    if (!mounted) return "--:--";
     const now = new Date();
     const h = now.getHours();
     const m = now.getMinutes().toString().padStart(2, "0");
     const hour12 = ((h + 11) % 12) + 1;
     const ampm = h >= 12 ? "PM" : "AM";
     return `${hour12}:${m}${ampm}`;
-  }, []);
+  }, [mounted]);
 
   const handleCopy = async () => {
     try {
@@ -60,6 +65,7 @@ export default function GlassmorphismProfileCard({
       className={cn("relative w-full max-w-[400px]", className)}
       onClick={(e) => e.stopPropagation()} // Prevent modal background clicks from triggering
       layoutId={layoutId}
+      suppressHydrationWarning
     >
      
       {/* Updated the glow underneath to match Nexode's primary blue color #3B82F6 */}
