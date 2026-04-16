@@ -32,6 +32,7 @@ export default function GlassmorphismProfileCard({
   layoutId,
 }: ComponentProps) {
   const [mounted, setMounted] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setMounted(true);
