@@ -8,7 +8,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Nexode AI | Obsidian Flare",
+  title: "Nexode AI",
   description: "Building Intelligent Systems for the Future",
 };
 

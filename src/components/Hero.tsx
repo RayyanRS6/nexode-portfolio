@@ -44,13 +44,14 @@ export default function Hero() {
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <motion.button 
+            <motion.a 
+              href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="copper-gradient-bg text-white px-10 py-4 rounded-lg font-bold text-lg copper-glow-border transition-all w-full sm:w-auto"
+              className="copper-gradient-bg text-white px-10 py-4 rounded-lg font-bold text-lg copper-glow-border transition-all w-full sm:w-auto text-center"
             >
               Explore Our Work
-            </motion.button>
+            </motion.a>
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

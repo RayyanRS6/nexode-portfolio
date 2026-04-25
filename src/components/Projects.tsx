@@ -39,7 +39,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {/* Large Card */}
-          <motion.div variants={cardVariants} className="md:col-span-2 min-h-fit md:h-[600px]">
+          <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px] md:h-[600px]">
             <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20">
               <img 
                 alt="URAME" 
@@ -47,10 +47,8 @@ export default function Projects() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw3r_hvY0BA7-HI5g1vllKnI7GCHFF0DEuc5960w3wnptx9SbT-S1lgCD9dgqxtinhExz5q9r1Ts7CsI4AivxBeDlJHqAw-apRl-XxH9CNvJVRO4g186iaNHp_X9zXql5XpWO2Vrbpat4mSv2H4ZDNgkkJ6QuReSptrI-GKsS8gnDDSaLf0OrTpkLsfVwN2Sol1jtF5G1EbSva3pU-_CYXbOfmbbhD5TGf4Rldzov7YpqZ4Ah0q7NKDXgm7UQUa5nJcGVU1G3QFq2R"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10 pointer-events-none"></div>
-              <motion.div 
-                className="absolute bottom-0 p-6 md:p-12 w-full z-20 pointer-events-auto"
-                initial={{ y: 20, opacity: 0.9 }}
-                whileHover={{ y: 0, opacity: 1 }}
+              <div 
+                className="absolute bottom-0 p-8 md:p-12 w-full z-20 pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0"
               >
                 <div className="flex gap-2 mb-6">
                   <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Neural Net</span>
@@ -63,54 +61,57 @@ export default function Projects() {
                 <button className="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
                   View Case Study <span className="material-symbols-outlined">arrow_forward</span>
                 </button>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
 
           {/* Jetstar */}
-          <motion.div variants={cardVariants} className="min-h-fit md:h-[600px]">
-            <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-6 md:p-10 flex flex-col justify-start md:justify-between gap-12 md:gap-0 group shadow-2xl transition-all duration-300 hover:border-primary/20">
-              <div className="relative z-20">
-                <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl">flight</span>
+          <motion.div variants={cardVariants} className="min-h-[400px] md:h-[600px]">
+            <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-end relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 text-left">
+              <img 
+                alt="Jetstar Weather App" 
+                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                src="/projects/jetstar_weather.png"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+              
+              <div className="p-6 md:p-8 relative z-20 w-full pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0">
+                <div className="flex gap-2 mb-4">
+                  <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Weather App</span>
+                  <span className="px-3 py-1 rounded bg-white/10 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest">MLOps</span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Jetstar</h3>
-                <p className="text-sm md:text-gray-400 leading-relaxed">
-                  Dynamic pricing engine utilizing deep reinforcement learning for optimal revenue.
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Jetstar</h3>
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-4 line-clamp-3">
+                  Dynamic pricing engine utilizing deep reinforcement learning for optimal revenue, integrated with real-time weather analytics.
                 </p>
-              </div>
-              <div className="relative z-20">
-                <div className="mt-8 flex gap-3">
-                  <span className="text-[10px] font-bold text-gray-600 tracking-widest">#MLOPS</span>
-                  <span className="text-[10px] font-bold text-gray-600 tracking-widest">#DATAVIZ</span>
-                </div>
-                <motion.div 
-                  className="mt-6 opacity-0 h-0 overflow-hidden"
-                  whileHover={{ opacity: 1, height: "auto" }}
-                >
-                  <button className="text-primary text-sm font-bold flex items-center gap-2">Read more <span className="material-symbols-outlined text-sm">east</span></button>
-                </motion.div>
+                <button className="text-primary text-sm font-bold flex items-center gap-2 hover:gap-4 transition-all">Read more <span className="material-symbols-outlined text-sm">east</span></button>
               </div>
             </div>
           </motion.div>
 
-          {/* Quantum Insight */}
-          <motion.div variants={cardVariants} className="h-auto">
-            <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-6 md:p-10 flex flex-col justify-start md:justify-between gap-12 md:gap-0 group shadow-2xl transition-all duration-300 hover:border-primary/20">
-              <div className="relative z-20">
-                <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl">query_stats</span>
+          {/* Junk Dispatch */}
+          <motion.div variants={cardVariants} className="min-h-[400px]">
+            <Link href="https://www.junkdispatch.com/" target="_blank" className="block w-full h-full">
+              <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-end relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 cursor-pointer text-left">
+                <img 
+                  alt="Junk Dispatch" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                  src="/projects/junk_dispatch_bg.png"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                
+                <div className="p-6 md:p-8 relative z-20 w-full pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Junk Removal</span>
+                    <span className="px-3 py-1 rounded bg-white/10 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest">Demolition</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Junk Dispatch</h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed line-clamp-3">
+                    A Massachusetts-based junk removal and demolition company offering instant quotes, same-day services, and guaranteed pricing.
+                  </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Quantum Insight</h3>
-                <p className="text-sm md:text-gray-400 leading-relaxed">
-                  Big-data analytics providing granular sentiment analysis for global equity markets.
-                </p>
               </div>
-              <div className="mt-8 flex gap-3 relative z-20">
-                <span className="text-[10px] font-bold text-gray-600 tracking-widest">#FINTECH</span>
-                <span className="text-[10px] font-bold text-gray-600 tracking-widest">#NLP</span>
-              </div>
-            </div>
+            </Link>
           </motion.div>
 
           {/* Calls Flow */}

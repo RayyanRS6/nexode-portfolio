@@ -21,6 +21,10 @@
   --font-body: var(--font-manrope), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-background);
   color: #E0E7F1;

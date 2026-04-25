@@ -4,9 +4,8 @@ import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Clock, Plus, Copy, Zap } from "lucide-react";
+import { Clock, Zap } from "lucide-react";
 
 interface ComponentProps {
   name?: string;
@@ -32,7 +31,6 @@ export default function GlassmorphismProfileCard({
   layoutId,
 }: ComponentProps) {
   const [mounted, setMounted] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -48,14 +46,6 @@ export default function GlassmorphismProfileCard({
     const ampm = h >= 12 ? "PM" : "AM";
     return `${hour12}:${m}${ampm}`;
   }, [mounted]);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
-    } catch {}
-  };
 
   return (
     <motion.div
@@ -115,23 +105,7 @@ export default function GlassmorphismProfileCard({
             </div>
           </div>
 
-       
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <Button
-              variant="outline"
-              className="h-12 justify-start gap-3 rounded-xl bg-white/5 border-white/10 text-white hover:bg-white/10 hover:text-white transition-colors"
-            >
-              <Plus className="h-4 w-4 text-primary" /> Hire Me
-            </Button>
 
-            <Button
-              variant="outline"
-              onClick={handleCopy}
-              className="h-12 justify-start gap-3 rounded-xl bg-white/5 border-white/10 text-white hover:bg-white/10 hover:text-white transition-colors"
-            >
-              <Copy className="h-4 w-4 text-primary" /> {copied ? "Copied" : "Copy Email"}
-            </Button>
-          </div>
         </CardContent>
       </Card>
     </motion.div>
