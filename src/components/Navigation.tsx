@@ -3,8 +3,36 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Navigation() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "projects", "team", "contact"];
+      const scrollPosition = window.scrollY + 200; // Offset for navbar
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -18,11 +46,19 @@ export default function Navigation() {
       </div>
 
       <div className="hidden md:flex gap-10 items-center">
-        <Link className="text-primary font-bold text-sm tracking-wide" href="/">Home</Link>
-        <Link className="text-gray-400 font-semibold text-sm hover:text-primary transition-colors duration-300" href="#about">About</Link>
-        <Link className="text-gray-400 font-semibold text-sm hover:text-primary transition-colors duration-300" href="#projects">Projects</Link>
-        <Link className="text-gray-400 font-semibold text-sm hover:text-primary transition-colors duration-300" href="#team">Team</Link>
-        <Link className="text-gray-400 font-semibold text-sm hover:text-primary transition-colors duration-300" href="#contact">Contact</Link>
+        {["home", "about", "projects", "team", "contact"].map((item) => (
+          <Link 
+            key={item}
+            className={`font-semibold text-sm tracking-wide transition-colors duration-300 capitalize ${
+              activeSection === item 
+                ? "text-primary font-bold" 
+                : "text-gray-400 hover:text-primary"
+            }`} 
+            href={`#${item}`}
+          >
+            {item}
+          </Link>
+        ))}
       </div>
 
       <motion.button

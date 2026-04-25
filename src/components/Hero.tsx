@@ -19,7 +19,7 @@ export default function Hero() {
   };
 
   return (
-    <header className="relative min-h-screen flex items-center pt-20 overflow-hidden hero-glow">
+    <header className="relative min-h-screen flex items-center pt-20 overflow-hidden hero-glow" id="home">
       <div className="container mx-auto px-6 sm:px-10 relative z-10">
         <motion.div 
           className="max-w-4xl"

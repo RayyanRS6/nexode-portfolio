@@ -22,23 +22,15 @@ const FooterContent = () => (
         </div>
       </div>
       
-      <div className="flex gap-4">
-        <motion.a 
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-12 h-12 rounded-lg border border-white/20 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-all" 
-          href="#"
-        >
-          <span className="material-symbols-outlined">language</span>
-        </motion.a>
-        <motion.a 
-          whileHover={{ scale: 1.1, rotate: -5 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-12 h-12 rounded-lg border border-white/20 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-all" 
-          href="#"
-        >
-          <span className="material-symbols-outlined">share</span>
-        </motion.a>
+      <div className="flex flex-col gap-3">
+        <div className="text-white/70 text-xs font-bold flex items-center gap-2">
+          <span className="material-symbols-outlined text-primary text-[14px]">location_on</span>
+          Sydney, NSW, Australia
+        </div>
+        <div className="text-white/70 text-xs font-bold flex items-center gap-2">
+          <span className="material-symbols-outlined text-primary text-[14px]">location_on</span>
+          Islamabad, Pakistan
+        </div>
       </div>
     </div>
   );
