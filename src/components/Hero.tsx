@@ -27,14 +27,8 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-variant border border-primary/20 text-primary text-xs font-bold mb-8 uppercase tracking-widest">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            Nexode AI 2.0 is live
-          </motion.div>
           
+
           <motion.h1 variants={itemVariants} className="text-5xl sm:text-7xl md:text-8xl font-headline font-extrabold tracking-tight leading-[1.1] sm:leading-[1.05] text-white mb-8">
             Building Intelligent Systems <span className="text-primary italic">for the Future</span>
           </motion.h1>

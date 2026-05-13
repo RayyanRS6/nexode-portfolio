@@ -38,31 +38,38 @@ export default function Projects() {
           }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {/* Large Card */}
+          {/* Growth Guild */}
           <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px] md:h-[600px]">
-            <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20">
-              <img 
-                alt="URAME" 
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000 z-0" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw3r_hvY0BA7-HI5g1vllKnI7GCHFF0DEuc5960w3wnptx9SbT-S1lgCD9dgqxtinhExz5q9r1Ts7CsI4AivxBeDlJHqAw-apRl-XxH9CNvJVRO4g186iaNHp_X9zXql5XpWO2Vrbpat4mSv2H4ZDNgkkJ6QuReSptrI-GKsS8gnDDSaLf0OrTpkLsfVwN2Sol1jtF5G1EbSva3pU-_CYXbOfmbbhD5TGf4Rldzov7YpqZ4Ah0q7NKDXgm7UQUa5nJcGVU1G3QFq2R"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10 pointer-events-none"></div>
-              <div 
-                className="absolute bottom-0 p-8 md:p-12 w-full z-20 pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0"
-              >
-                <div className="flex gap-2 mb-6">
-                  <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Neural Net</span>
-                  <span className="px-3 py-1 rounded bg-white/10 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest">Cloud Native</span>
+            <Link href="https://portfolio.growthguild.us/" target="_blank" className="block w-full h-full">
+              <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-center relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 cursor-pointer text-left">
+                <img 
+                  alt="Growth Guild" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                  src="/projects/growth_guild_bg.png"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                
+                <div className="p-6 md:p-12 relative z-20 w-full md:w-2/3 pointer-events-none">
+                  <div className="flex gap-2 mb-6 pointer-events-auto">
+                    <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Marketing Agency</span>
+                    <span className="px-3 py-1 rounded bg-white/10 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest">Growth Engine</span>
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 pointer-events-auto">Growth Guild</h3>
+                  <p className="text-base md:text-xl text-gray-300 leading-relaxed mb-6 pointer-events-auto max-w-xl">
+                    A premier marketing agency driving digital growth and scalable solutions for modern brands.
+                  </p>
+                  <div className="flex items-center gap-4 text-sm font-bold pointer-events-auto">
+                    <span className="text-primary">Digital Marketing</span>
+                    <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                    <span className="text-gray-500">Active Portfolio</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">URAME</h3>
-                <p className="text-base md:text-lg text-gray-300 max-w-lg mb-8">
-                  Predictive maintenance for industrial robotics, reducing downtime by 40%.
-                </p>
-                <button className="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
-                  View Case Study <span className="material-symbols-outlined">arrow_forward</span>
-                </button>
+                
+                <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden md:block z-0 pointer-events-none opacity-10 group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-700">
+                  <span className="material-symbols-outlined text-[180px]" style={{ fontVariationSettings: "'FILL' 1" }}>trending_up</span>
+                </div>
               </div>
-            </div>
+            </Link>
           </motion.div>
 
           {/* Jetstar */}
@@ -180,6 +187,30 @@ export default function Projects() {
                 </div>
               </div>
             </Link>
+          </motion.div>
+
+          {/* URAME */}
+          <motion.div variants={cardVariants} className="min-h-[400px]">
+            <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-end relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 text-left">
+              <img 
+                alt="URAME" 
+                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw3r_hvY0BA7-HI5g1vllKnI7GCHFF0DEuc5960w3wnptx9SbT-S1lgCD9dgqxtinhExz5q9r1Ts7CsI4AivxBeDlJHqAw-apRl-XxH9CNvJVRO4g186iaNHp_X9zXql5XpWO2Vrbpat4mSv2H4ZDNgkkJ6QuReSptrI-GKsS8gnDDSaLf0OrTpkLsfVwN2Sol1jtF5G1EbSva3pU-_CYXbOfmbbhD5TGf4Rldzov7YpqZ4Ah0q7NKDXgm7UQUa5nJcGVU1G3QFq2R"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+              
+              <div className="p-6 md:p-8 relative z-20 w-full pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Neural Net</span>
+                  <span className="px-3 py-1 rounded bg-white/10 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest">Cloud Native</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">URAME</h3>
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-4 line-clamp-3">
+                  Predictive maintenance for industrial robotics, reducing downtime by 40%.
+                </p>
+                <button className="text-primary text-sm font-bold flex items-center gap-2 hover:gap-4 transition-all">View Case Study <span className="material-symbols-outlined text-sm">east</span></button>
+              </div>
+            </div>
           </motion.div>
 
         </motion.div>
