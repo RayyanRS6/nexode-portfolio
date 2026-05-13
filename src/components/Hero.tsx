@@ -46,13 +46,14 @@ export default function Hero() {
             >
               Explore Our Work
             </motion.a>
-            <motion.button 
+            <motion.a 
+              href="#about"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-white/10 hover:border-primary/50 text-white px-10 py-4 rounded-lg font-bold text-lg bg-white/5 backdrop-blur-sm transition-all w-full sm:w-auto"
+              className="border border-white/10 hover:border-primary/50 text-white px-10 py-4 rounded-lg font-bold text-lg bg-white/5 backdrop-blur-sm transition-all w-full sm:w-auto text-center flex items-center justify-center"
             >
               Read the Vision
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
