@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 export default function Projects() {
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
   };
@@ -18,18 +18,18 @@ export default function Projects() {
     <section className="py-32 bg-background relative overflow-hidden" id="projects">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] pointer-events-none"></div>
       <div className="container mx-auto px-6 sm:px-10 relative z-10">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-6xl font-headline font-extrabold text-white mb-4">Pioneering Solutions</h2>
+          <h2 className="text-6xl font-headline font-extrabold text-white mb-4">Projects</h2>
           <p className="text-xl text-gray-400 font-medium">Deployments across diverse tech ecosystems.</p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
@@ -42,13 +42,13 @@ export default function Projects() {
           <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px] md:h-[600px]">
             <Link href="https://portfolio.growthguild.us/" target="_blank" className="block w-full h-full">
               <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-center relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 cursor-pointer text-left">
-                <img 
-                  alt="Growth Guild" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                <img
+                  alt="Growth Guild"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0"
                   src="/projects/growth_guild_bg.png"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-                
+
                 <div className="p-6 md:p-12 relative z-20 w-full md:w-2/3 pointer-events-none">
                   <div className="flex gap-2 mb-6 pointer-events-auto">
                     <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Marketing Agency</span>
@@ -64,7 +64,7 @@ export default function Projects() {
                     <span className="text-gray-500">Active Portfolio</span>
                   </div>
                 </div>
-                
+
                 <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden md:block z-0 pointer-events-none opacity-10 group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-700">
                   <span className="material-symbols-outlined text-[180px]" style={{ fontVariationSettings: "'FILL' 1" }}>trending_up</span>
                 </div>
@@ -75,13 +75,13 @@ export default function Projects() {
           {/* Jetstar */}
           <motion.div variants={cardVariants} className="min-h-[400px] md:h-[600px]">
             <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-end relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 text-left">
-              <img 
-                alt="Jetstar Weather App" 
-                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+              <img
+                alt="Jetstar Weather App"
+                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0"
                 src="/projects/jetstar_weather.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-              
+
               <div className="p-6 md:p-8 relative z-20 w-full pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0">
                 <div className="flex gap-2 mb-4">
                   <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Weather App</span>
@@ -100,13 +100,13 @@ export default function Projects() {
           <motion.div variants={cardVariants} className="min-h-[400px]">
             <Link href="https://www.junkdispatch.com/" target="_blank" className="block w-full h-full">
               <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-end relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 cursor-pointer text-left">
-                <img 
-                  alt="Junk Dispatch" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                <img
+                  alt="Junk Dispatch"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0"
                   src="/projects/junk_dispatch_bg.png"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-                
+
                 <div className="p-6 md:p-8 relative z-20 w-full pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0">
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Junk Removal</span>
@@ -125,13 +125,13 @@ export default function Projects() {
           <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px]">
             <Link href="https://callsflow.io" target="_blank" className="block w-full h-full">
               <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-center relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 cursor-pointer text-left">
-                <img 
-                  alt="Calls Flow" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                <img
+                  alt="Calls Flow"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0"
                   src="/projects/callsflow.png"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-                
+
                 <div className="p-6 md:p-12 relative z-20 w-full md:w-2/3 pointer-events-none">
                   <div className="flex gap-2 mb-6 pointer-events-auto">
                     <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">VoIP & AI</span>
@@ -147,7 +147,7 @@ export default function Projects() {
                     <span className="text-gray-500">Active Deployment</span>
                   </div>
                 </div>
-                
+
                 <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden md:block z-0 pointer-events-none opacity-10 group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-700">
                   <span className="material-symbols-outlined text-[180px]" style={{ fontVariationSettings: "'FILL' 1" }}>settings_phone</span>
                 </div>
@@ -159,13 +159,13 @@ export default function Projects() {
           <motion.div variants={cardVariants} className="md:col-span-2 min-h-[400px]">
             <Link href="https://croptivize.vercel.app/" target="_blank" className="block w-full h-full">
               <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-center relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 cursor-pointer text-left">
-                <img 
-                  alt="Croptivize" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+                <img
+                  alt="Croptivize"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0"
                   src="/projects/croptivize.png"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-                
+
                 <div className="p-6 md:p-12 relative z-20 w-full md:w-2/3 pointer-events-none">
                   <div className="flex gap-2 mb-6 pointer-events-auto">
                     <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Vision AI</span>
@@ -181,7 +181,7 @@ export default function Projects() {
                     <span className="text-gray-500">2026 Deployment</span>
                   </div>
                 </div>
-                
+
                 <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden md:block z-0 pointer-events-none opacity-10 group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-700">
                   <span className="material-symbols-outlined text-[180px]" style={{ fontVariationSettings: "'FILL' 1" }}>agriculture</span>
                 </div>
@@ -192,13 +192,13 @@ export default function Projects() {
           {/* URAME */}
           <motion.div variants={cardVariants} className="min-h-[400px]">
             <div className="w-full h-full bg-surface border border-white/5 rounded-[24px] p-0 flex items-end relative group overflow-hidden shadow-2xl transition-all duration-300 hover:border-primary/20 text-left">
-              <img 
-                alt="URAME" 
-                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0" 
+              <img
+                alt="URAME"
+                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000 z-0"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw3r_hvY0BA7-HI5g1vllKnI7GCHFF0DEuc5960w3wnptx9SbT-S1lgCD9dgqxtinhExz5q9r1Ts7CsI4AivxBeDlJHqAw-apRl-XxH9CNvJVRO4g186iaNHp_X9zXql5XpWO2Vrbpat4mSv2H4ZDNgkkJ6QuReSptrI-GKsS8gnDDSaLf0OrTpkLsfVwN2Sol1jtF5G1EbSva3pU-_CYXbOfmbbhD5TGf4Rldzov7YpqZ4Ah0q7NKDXgm7UQUa5nJcGVU1G3QFq2R"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-              
+
               <div className="p-6 md:p-8 relative z-20 w-full pointer-events-auto transition-all duration-500 opacity-100 md:opacity-90 md:group-hover:opacity-100 md:translate-y-4 md:group-hover:translate-y-0">
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 rounded bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">Neural Net</span>

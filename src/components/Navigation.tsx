@@ -64,9 +64,12 @@ export default function Navigation() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        onClick={() => {
+          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+        }}
         className="copper-gradient-bg text-white px-4 md:px-6 py-2 rounded-lg font-bold text-xs md:text-sm copper-glow-border transition-transform"
       >
-        Get Started
+        Contact Us
       </motion.button>
     </motion.nav>
   );
